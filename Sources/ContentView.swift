@@ -3,6 +3,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var text: String = ""
+
     var body: some View {
         VStack(spacing: 16) {
             Image(systemName: "apple.logo")
@@ -12,6 +14,10 @@ struct ContentView: View {
                 .bold()
             Text("Made on Windows with Orchard")
                 .foregroundStyle(Color.secondary)
+            Spacer()
+                .foregroundStyle(Color.blue)
+            TextField("qweqqwe", text: $text)
+                .textFieldStyle(.roundedBorder)
         }
             .padding(24)
     }
